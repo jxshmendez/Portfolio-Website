@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-[#F3F3F3] min-h-screen">
       {/* Hero Section */}
       <section className="pt-32 pb-16">
         <div className="container">
@@ -40,7 +40,7 @@ const Home = () => {
               <div className="h-48 bg-primary-100 mb-6 flex items-center justify-center">
                 <span className="text-primary-500">Football Fatigue Tracker: Using Only Computer Vision</span>
               </div>
-              <h3 className="text-xl font-medium mb-2">Fatigue Analysis</h3>
+              <h3 className="text-xl font-medium mb-2">Football Fatigue Tracker With Computer Vision</h3>
               <p className="text-primary-700 mb-4">
                 A Football Fatigue Tracker that uses only Computer Vision to detect the player's fatigue.
               </p>
@@ -49,13 +49,10 @@ const Home = () => {
             
             <div className="bg-white p-6 border border-primary-200">
               <div className="h-48 bg-primary-100 mb-6 flex items-center justify-center">
-                <span className="text-primary-500">Task Management App</span>
+                <span className="text-primary-500">Empty</span>
               </div>
-              <h3 className="text-xl font-medium mb-2">Task Management App</h3>
-              <p className="text-primary-700 mb-4">
-                A collaborative task management application with real-time updates,
-                team spaces, and progress tracking.
-              </p>
+              <h3 className="text-xl font-medium mb-2">Empty</h3>
+              <p className="text-primary-700 mb-4">Empty</p>
               <Link to="/projects" className="text-accent-500 hover:underline">View details →</Link>
             </div>
           </div>

@@ -32,36 +32,36 @@ const Projects = () => {
       setProjects([
         {
           id: 1,
-          title: 'E-Commerce Platform',
-          description: 'A full-stack e-commerce platform with product catalog, shopping cart, user authentication, and payment processing.',
-          technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe'],
+          title: 'Football Fatigue Tracker With Computer Vision',
+          description: 'A Football Fatigue Tracker that uses only Computer Vision to detect the player\'s fatigue leveraging the YOLO (You Only Look Once) algorithm and ByteTrack algorithm.',
+          technologies: ['YOLO', 'ByteTrack', 'OpenCV', 'Python'],
           github: 'https://github.com/joshmendez/ecommerce-platform',
           live: 'https://ecommerce-demo.example.com',
           image: 'ecommerce.jpg'
         },
         {
           id: 2,
-          title: 'Task Management App',
-          description: 'A collaborative task management application with real-time updates, team spaces, and progress tracking.',
-          technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
+          title: 'Empty',
+          description: 'Empty',
+          technologies: [],
           github: 'https://github.com/joshmendez/task-manager',
           live: 'https://task-app.example.com',
           image: 'task-app.jpg'
         },
         {
           id: 3,
-          title: 'Health Monitoring Dashboard',
-          description: 'A health metrics visualization dashboard that helps users track their wellness goals and exercise routines.',
-          technologies: ['React', 'D3.js', 'Flask', 'PostgreSQL'],
+          title: 'Empty',
+          description: 'Empty',
+          technologies: [],
           github: 'https://github.com/joshmendez/health-dashboard',
           live: 'https://health.example.com',
           image: 'health-dashboard.jpg'
         },
         {
           id: 4,
-          title: 'Weather Forecast App',
-          description: 'A weather forecasting application that provides accurate weather predictions using multiple weather APIs.',
-          technologies: ['React Native', 'Redux', 'Weather API'],
+          title: 'Empty',
+          description: 'Empty',
+          technologies: [],
           github: 'https://github.com/joshmendez/weather-app',
           live: 'https://weather.example.com',
           image: 'weather-app.jpg'
@@ -72,7 +72,7 @@ const Projects = () => {
   }, [])
   
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-[#F3F3F3] min-h-screen">
       {/* Header Section */}
       <section className="pt-32 pb-12">
         <div className="container">

@@ -34,33 +34,15 @@ const Navbar = () => {
         
         {/* Hamburger Menu Button (visible on mobile) */}
         <button 
-          className="lg:hidden p-2 focus:outline-none" 
+          className="block lg:hidden p-2 hover:bg-gray-100 rounded-lg"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            {isMenuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
+          <div className="w-6 h-5 flex flex-col justify-between">
+            <span className={`h-0.5 w-6 bg-gray-600 transform transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`h-0.5 w-6 bg-gray-600 transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`h-0.5 w-6 bg-gray-600 transform transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          </div>
         </button>
 
         {/* Desktop Navigation */}
@@ -107,17 +89,17 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         <div 
-          className={`fixed lg:hidden top-[64px] left-0 right-0 bg-white border-b border-primary-200 transition-transform duration-300 transform ${
-            isMenuOpen ? 'translate-y-0' : '-translate-y-full'
+          className={`fixed lg:hidden top-[64px] left-0 right-0 bg-white shadow-lg border-b border-primary-200 transition-all duration-300 ease-in-out ${
+            isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
           }`}
         >
-          <nav className="container py-4">
-            <ul className="flex flex-col space-y-4">
+          <nav className="container py-6">
+            <ul className="flex flex-col space-y-6">
               <li>
                 <NavLink 
                   to="/" 
                   className={({ isActive }) => 
-                    `nav-link block py-2 ${isActive ? 'active' : ''}`
+                    `nav-link block px-4 py-2 text-lg ${isActive ? 'active font-medium' : ''}`
                   }
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -128,7 +110,7 @@ const Navbar = () => {
                 <NavLink 
                   to="/about" 
                   className={({ isActive }) => 
-                    `nav-link block py-2 ${isActive ? 'active' : ''}`
+                    `nav-link block px-4 py-2 text-lg ${isActive ? 'active font-medium' : ''}`
                   }
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -139,7 +121,7 @@ const Navbar = () => {
                 <NavLink 
                   to="/projects" 
                   className={({ isActive }) => 
-                    `nav-link block py-2 ${isActive ? 'active' : ''}`
+                    `nav-link block px-4 py-2 text-lg ${isActive ? 'active font-medium' : ''}`
                   }
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -150,7 +132,7 @@ const Navbar = () => {
                 <NavLink 
                   to="/contact" 
                   className={({ isActive }) => 
-                    `nav-link block py-2 ${isActive ? 'active' : ''}`
+                    `nav-link block px-4 py-2 text-lg ${isActive ? 'active font-medium' : ''}`
                   }
                   onClick={() => setIsMenuOpen(false)}
                 >

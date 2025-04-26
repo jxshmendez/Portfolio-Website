@@ -17,7 +17,8 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [scrolled])
 
-  const toggleMenu = () => {
+  const toggleMenu = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation()
     setIsMenuOpen(!isMenuOpen)
   }
   

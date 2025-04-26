@@ -13,31 +13,6 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
 function App() {
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setLoading(false)
-    }, 1000)
-
-    return () => clearTimeout(timer)
-  }, [])
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-screen bg-white dark:bg-gray-900">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-4xl font-bold text-primary-600"
-        >
-          Loading...
-        </motion.div>
-      </div>
-    )
-  }
-
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />

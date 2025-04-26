@@ -42,7 +42,7 @@ const Contact = () => {
   }
   
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-[#F3F3F3] min-h-screen">
       {/* Header Section */}
       <section className="pt-32 pb-12">
         <div className="container">
@@ -67,20 +67,22 @@ const Contact = () => {
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="p-2 border border-primary-200">
-                    <svg
-                      className="w-6 h-6 text-primary-700"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
+                    <a href="mailto:6joshmendez@gmail.com">
+                      <svg
+                        className="w-6 h-6 text-primary-700"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </a>
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Email</h3>
@@ -140,7 +142,7 @@ const Contact = () => {
                 
                 {submitSuccess && (
                   <div className="border-l-2 border-accent-500 bg-primary-50 p-4 mb-6">
-                    <p>Message sent successfully! I'll get back to you soon.</p>
+                    <p>Message sent successfully!</p>
                   </div>
                 )}
                 

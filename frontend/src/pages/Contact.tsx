@@ -42,9 +42,9 @@ const Contact = () => {
   }
   
   return (
-    <div className="bg-[#F3F3F3] min-h-screen">
+    <div className="min-h-screen">
       {/* Header Section */}
-      <section className="pt-32 pb-12">
+      <section className="pt-32 pb-12 bg-[#D1ABAD]">
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-medium mb-6 leading-tight">
@@ -121,7 +121,7 @@ const Contact = () => {
                         </svg>
                       </a>
                       <a
-                        href="https://linkedin.com/in/joshmendez"
+                        href="https://www.linkedin.com/in/joshua-mendez-8080892b7/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary-700 hover:text-accent-500"

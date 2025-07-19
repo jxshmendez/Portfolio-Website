@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 interface Project {
   id: number
@@ -7,8 +7,9 @@ interface Project {
   description: string
   technologies: string[]
   github: string
-  live: string
-  image: string
+  image?: string
+  video?: string
+  hasVideo?: boolean
 }
 
 const Projects = () => {
@@ -16,18 +17,6 @@ const Projects = () => {
   const [loading, setLoading] = useState(true)
   
   useEffect(() => {
-    // In a real app, we would fetch from the API
-    // axios.get('/api/projects')
-    //   .then(response => {
-    //     setProjects(response.data)
-    //     setLoading(false)
-    //   })
-    //   .catch(error => {
-    //     console.error('Error fetching projects:', error)
-    //     setLoading(false)
-    //   })
-    
-    // For now, hardcode some sample projects
     setTimeout(() => {
       setProjects([
         {
@@ -35,36 +24,34 @@ const Projects = () => {
           title: 'Football Fatigue Tracker With Computer Vision',
           description: 'A Football Fatigue Tracker that uses only Computer Vision to detect the player\'s fatigue leveraging the YOLO (You Only Look Once) algorithm and ByteTrack algorithm.',
           technologies: ['YOLO', 'ByteTrack', 'OpenCV', 'Python'],
-          github: 'https://github.com/joshmendez/ecommerce-platform',
-          live: 'https://ecommerce-demo.example.com',
-          image: 'ecommerce.jpg'
+          github: 'https://github.com/jxshmendez/Football_Fatigue_Analysis',
+          video: '/football.webm',
+          hasVideo: true
         },
         {
           id: 2,
-          title: 'Empty',
-          description: 'Empty',
-          technologies: [],
+          title: 'Distributed Medical System',
+          description: 'Distibuted emergency response system designed to improve coordination between ambulance crews, regional hospitals, and headquarters. It uses client-server architecture to enable real-time sharing of emergency call data and patient medical records.',
+          technologies: ['React', 'Node.js', 'SwiftUI', 'SQLite'],
           github: 'https://github.com/joshmendez/task-manager',
-          live: 'https://task-app.example.com',
-          image: 'task-app.jpg'
+          image: '/MedicalSystem.png'
         },
         {
           id: 3,
-          title: 'Empty',
-          description: 'Empty',
-          technologies: [],
-          github: 'https://github.com/joshmendez/health-dashboard',
-          live: 'https://health.example.com',
-          image: 'health-dashboard.jpg'
+          title: 'Console First-Person Maze',
+          description: 'A simple first-person maze navigation game built using C++ with console-based rendering. This project demonstrates ray-casting techniques to render a 3D-like environment in a text-based console.',
+          technologies: ['C++'],
+          github: 'https://github.com/jxshmendez/Console-First-Person-Maze',
+          image: '/consolemaze.png'
         },
         {
           id: 4,
-          title: 'Empty',
-          description: 'Empty',
-          technologies: [],
-          github: 'https://github.com/joshmendez/weather-app',
-          live: 'https://weather.example.com',
-          image: 'weather-app.jpg'
+          title: 'Group Project: Machine Learning On Board an Autonomous Robot',
+          description: 'A group project implementing machine learning on an autonomous robot using computer vision for navigation and object detection.',
+          technologies: ['Python', 'YOLO', 'ByteTrack', 'OpenCV'],
+          github: 'https://github.com/jxshmendez/Machine-Learning-On-board-an-Autonomous-Robot/tree/main',
+          video: '/Robot.mp4',
+          hasVideo: true
         }
       ])
       setLoading(false)
@@ -74,7 +61,7 @@ const Projects = () => {
   return (
     <div className="bg-[#F3F3F3] min-h-screen">
       {/* Header Section */}
-      <section className="pt-32 pb-12">
+      <section className="pt-32 pb-12 bg-[#D0DCD7]">
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-medium mb-6 leading-tight">
@@ -96,43 +83,84 @@ const Projects = () => {
               <div className="animate-spin h-8 w-8 border-t-2 border-b-2 border-accent-500 rounded-full"></div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {projects.map((project) => (
-                <div key={project.id} className="border-b border-primary-200 pb-8">
-                  <div className="h-48 bg-primary-50 mb-6 flex items-center justify-center">
-                    <span className="text-primary-500">{project.title}</span>
+                <div key={project.id} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <div className="h-48 overflow-hidden">
+                    {project.hasVideo ? (
+                      <div className="relative w-full h-full">
+                        <video 
+                          src={project.video}
+                          className="w-full h-full object-cover transition-transform duration-500"
+                          autoPlay 
+                          loop
+                          muted
+                          playsInline
+                          controls
+                          onError={(e) => {
+                            console.error('Error loading video:', e);
+                            const videoElement = e.target as HTMLVideoElement;
+                            videoElement.style.display = 'none';
+                            const fallback = document.createElement('div');
+                            fallback.className = 'w-full h-full bg-gray-200 flex items-center justify-center';
+                            fallback.textContent = 'Video failed to load. View on GitHub.';
+                            videoElement.parentNode?.insertBefore(fallback, videoElement.nextSibling);
+                          }}
+                        >
+                          Your browser does not support the video tag.
+                        </video>
+                        {project.image && (
+                          <img 
+                            src={project.image} 
+                            alt={project.title}
+                            className="absolute inset-0 w-full h-full object-cover"
+                            style={{ display: 'none' }}
+                            onError={(e) => {
+                              (e.target as HTMLImageElement).style.display = 'none';
+                            }}
+                          />
+                        )}
+                      </div>
+                    ) : project.image ? (
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-r from-primary-100 to-primary-200 flex items-center justify-center">
+                        <span className="text-primary-500 text-center px-4">{project.title}</span>
+                      </div>
+                    )}
                   </div>
-                  <h3 className="text-xl font-medium mb-2">{project.title}</h3>
-                  <p className="text-primary-700 mb-4">{project.description}</p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map(tech => (
-                      <span 
-                        key={tech} 
-                        className="px-3 py-1 bg-primary-50 text-sm"
+                  <div className="p-6">
+                    <h3 className="text-xl font-medium mb-2 text-gray-800">{project.title}</h3>
+                    <p className="text-gray-600 mb-4">{project.description}</p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.map(tech => (
+                        <span 
+                          key={tech} 
+                          className="px-3 py-1 bg-primary-50 text-sm rounded-full"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <div className="flex space-x-6">
+                      <a 
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent-500 hover:underline flex items-center"
                       >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  <div className="flex space-x-6">
-                    <a 
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-accent-500 hover:underline"
-                    >
-                      GitHub
-                    </a>
-                    <a 
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-accent-500 hover:underline"
-                    >
-                      Live Demo
-                    </a>
+                        <span>View on GitHub</span>
+                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -141,7 +169,7 @@ const Projects = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Projects 
+export default Projects;

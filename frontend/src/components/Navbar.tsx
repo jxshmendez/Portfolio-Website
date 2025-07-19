@@ -29,9 +29,10 @@ const Navbar = () => {
           scrolled ? 'bg-white border-b border-primary-200' : 'bg-white'
         }`}
       >
-        <div className="container py-4 flex items-center justify-between">
-          <NavLink to="/" className="text-xl font-medium">
-            Josh Mendez
+        <div className="container h-16 flex items-center justify-between">
+          <NavLink to="/" className="group relative text-xl font-medium overflow-hidden">
+            <span className="relative z-10">Josh Mendez</span>
+            <span className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#FCAB10] via-[#FCAB10]/80 to-[#FCAB10]/30 transition-all duration-500 group-hover:w-full"></span>
           </NavLink>
           
           {/* Hamburger Menu Button (visible on mobile) */}
@@ -53,7 +54,9 @@ const Navbar = () => {
               <li>
                 <NavLink to="/" 
                   className={({ isActive }) => 
-                    `nav-link ${isActive ? 'active' : ''}`
+                    `nav-link h-16 flex items-center px-4 transition-colors duration-200 ${
+                      isActive ? 'bg-[#FF5154] text-white' : 'hover:bg-gray-100'
+                    }`
                   }
                 >
                   Home
@@ -62,7 +65,9 @@ const Navbar = () => {
               <li>
                 <NavLink to="/about" 
                   className={({ isActive }) => 
-                    `nav-link ${isActive ? 'active' : ''}`
+                    `nav-link h-16 flex items-center px-4 transition-colors duration-200 ${
+                      isActive ? 'bg-[#FF5154] text-white' : 'hover:bg-gray-100'
+                    }`
                   }
                 >
                   About
@@ -71,7 +76,9 @@ const Navbar = () => {
               <li>
                 <NavLink to="/projects" 
                   className={({ isActive }) => 
-                    `nav-link ${isActive ? 'active' : ''}`
+                    `nav-link h-16 flex items-center px-4 transition-colors duration-200 ${
+                      isActive ? 'bg-[#FF5154] text-white' : 'hover:bg-gray-100'
+                    }`
                   }
                 >
                   Projects
@@ -80,7 +87,9 @@ const Navbar = () => {
               <li>
                 <NavLink to="/contact" 
                   className={({ isActive }) => 
-                    `nav-link ${isActive ? 'active' : ''}`
+                    `nav-link h-16 flex items-center px-4 transition-colors duration-200 ${
+                      isActive ? 'bg-[#FF5154] text-white' : 'hover:bg-gray-100'
+                    }`
                   }
                 >
                   Contact

@@ -4,14 +4,15 @@ const About = () => {
   return (
     <div className="bg-[#F3F3F3] min-h-screen">
       {/* Header Section */}
-      <section className="pt-32 pb-12 bg-[#EBF0DC]">
+      <section className="pt-32 pb-12 bg-[#9FB8AD]">
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-medium mb-6 leading-tight">
               About Me
             </h1>
             <p className="text-xl mb-6 text-primary-700">
-              Software engineer with a passion for creating innovative and accessible applications.
+              BEng Software Engineering graduate with a passion for creating accessible,
+              user-focused applications that solve real-world problems.
             </p>
           </div>
         </div>
@@ -25,22 +26,30 @@ const About = () => {
               <h2 className="text-2xl font-medium mb-6">My Journey</h2>
               <div className="space-y-4 text-primary-700">
                 <p>
-                  I'm a recent BEng Software Engineering graduate with a passion for creating
-                  applications that are both powerful and accessible. My journey in software
-                  development began during my university studies where I discovered my love for
-                  problem-solving and creating digital solutions.
+                  Hi! I'm a Software Engineering graduate who enjoys building things that are useful,
+                  efficient and accessible.
                 </p>
                 <p>
-                  Throughout my academic career, I focused on developing a strong foundation in
-                  computer science principles while also gaining practical experience through
-                  self-learning and personal projects. This balanced approach has allowed me to
-                  work effectively with both front-end and back-end technologies.
+                  I've explored a lot through personal and university projects, especially in machine learning and
+                  computer vision. One of my main projects was a football fatigue tracker that I built for
+                  my dissertation. It uses computer vision to track players, measure distance covered and
+                  estimate fatigue based on movement patterns. The pipeline successfully achieves 94.3% accuracy in player detection.
+                  A custom tracking algorithm was implemented to improve performance, the algorithm improved the ByteTrack tracking by 33%. 
+                  The project was designed with smaller teams in mind, aiming to make sports analysis more affordable and accessible without the need for expensive
+                  hardware.
                 </p>
                 <p>
-                  I enjoy working with modern web technologies like React, Node.js, and Flask
-                  to build responsive, efficient, and scalable applications. I'm particularly 
-                  interested in clean architecture, responsive UI design, and optimising for 
-                  performance.
+                  Another project I really enjoyed was building an autonomous rover using a Jetson Nano. I trained
+                  it to follow objects in real time, which game me hands on experience applying AI in a physical
+                  environment.
+                </p>
+                <p>
+                  I care deeply about accessibility. Not just in terms of design, but also making sure the tools I
+                  build work well on lower-end devices. Good software should be efficient, lightweight, and usable by
+                  everyone, regardless of what kind of tech they have.
+                </p>
+                <p>
+                  Thank you for visiting, check out my projects or get in touch if you'd like to connect!
                 </p>
               </div>
               
@@ -51,7 +60,26 @@ const About = () => {
                   <p className="text-primary-600">2022 - 2025</p>
                 </div>
                 <p className="text-primary-600 mb-2">Edinburgh Napier University</p>
-                <p>Graduated with First Class Honours. Specialised in Web Development and Machine Learning.</p>
+                <p>Graduated with First Class Honours.</p>
+
+              </div>
+
+              <div className="border-b border-primary-200 pb-6 mb-6">
+                <div className="flex justify-between mb-2">
+                  <h3 className="font-medium">HNC Software Engineering</h3>
+                  <p className="text-primary-600">2021 - 2022</p>
+                </div>
+                <p className="text-primary-600 mb-2">City of Glasgow College</p>
+                <p>Distinction</p>
+              </div>
+
+              <div className="border-b border-primary-200 pb-6 mb-6">
+                <div className="flex justify-between mb-2">
+                  <h3 className="font-medium">NC Audio Visual Technology</h3>
+                  <p className="text-primary-600">2020 - 2021</p>
+                </div>
+                <p className="text-primary-600 mb-2">Edinburgh College</p>
+                <p>Pass - A</p>
               </div>
             </div>
             
@@ -121,11 +149,12 @@ const About = () => {
               <div>
                 <h2 className="text-2xl font-medium mb-6">Interests</h2>
                 <ul className="space-y-2 text-primary-700">
+                  <li>Computer Hardware</li>
                   <li>Web Development</li>
-                  <li>User Experience Design</li>
                   <li>Machine Learning</li>
-                  <li>Open Source Contributing</li>
-                  <li>Cloud Computing</li>
+                  <li>Rock Climbing</li>
+                  <li>Cooking</li>
+                  <li>Guitar</li>
                 </ul>
               </div>
             </div>

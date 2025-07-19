@@ -112,7 +112,11 @@ const Navbar = () => {
               <NavLink 
                 to="/" 
                 className={({ isActive }) => 
-                  `block px-4 py-2 text-xl ${isActive ? 'text-primary-600 font-medium' : 'text-gray-800'}`
+                  `block px-4 py-3 text-lg rounded-md transition-colors ${
+                    isActive 
+                      ? 'text-white bg-[#FCAB10] font-medium' 
+                      : 'text-gray-800 hover:bg-gray-100'
+                  }`
                 }
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -123,7 +127,11 @@ const Navbar = () => {
               <NavLink 
                 to="/about" 
                 className={({ isActive }) => 
-                  `block px-4 py-2 text-xl ${isActive ? 'text-primary-600 font-medium' : 'text-gray-800'}`
+                  `block px-4 py-3 text-lg rounded-md transition-colors ${
+                    isActive 
+                      ? 'text-white bg-[#FCAB10] font-medium' 
+                      : 'text-gray-800 hover:bg-gray-100'
+                  }`
                 }
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -134,7 +142,11 @@ const Navbar = () => {
               <NavLink 
                 to="/projects" 
                 className={({ isActive }) => 
-                  `block px-4 py-2 text-xl ${isActive ? 'text-primary-600 font-medium' : 'text-gray-800'}`
+                  `block px-4 py-3 text-lg rounded-md transition-colors ${
+                    isActive 
+                      ? 'text-white bg-[#FCAB10] font-medium' 
+                      : 'text-gray-800 hover:bg-gray-100'
+                  }`
                 }
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -145,7 +157,11 @@ const Navbar = () => {
               <NavLink 
                 to="/contact" 
                 className={({ isActive }) => 
-                  `block px-4 py-2 text-xl ${isActive ? 'text-primary-600 font-medium' : 'text-gray-800'}`
+                  `block px-4 py-3 text-lg rounded-md transition-colors ${
+                    isActive 
+                      ? 'text-white bg-[#FCAB10] font-medium' 
+                      : 'text-gray-800 hover:bg-gray-100'
+                  }`
                 }
                 onClick={() => setIsMenuOpen(false)}
               >

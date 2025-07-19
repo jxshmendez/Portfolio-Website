@@ -43,8 +43,8 @@ const Home = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-[#EFF8E2]">
         <div className="container">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-            <div className="max-w-2xl">
+          <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+            <div className="max-w-2xl mt-8 md:mt-0">
               <h1 className="text-4xl md:text-5xl font-medium mb-2 leading-tight">
                 Software Engineer
               </h1>

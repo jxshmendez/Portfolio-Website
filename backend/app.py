@@ -1,5 +1,13 @@
-from flask import Flask, jsonify, redirect, url_for, render_template_string
+from flask import Flask, jsonify, redirect, url_for, render_template_string, request
 from flask_cors import CORS
+import os
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
@@ -100,6 +108,53 @@ def get_projects():
             'image': 'portfolio.jpg'
         }
     ])
+
+@app.route('/api/contact', methods=['POST'])
+def contact():
+    try:
+        data = request.get_json()
+        
+        # Validate required fields
+        required_fields = ['name', 'email', 'message']
+        for field in required_fields:
+            if not data.get(field):
+                return jsonify({'error': f'Missing required field: {field}'}), 400
+        
+        # Email configuration
+        sender_email = os.getenv('EMAIL_USER')
+        receiver_email = os.getenv('EMAIL_RECEIVER') or sender_email
+        password = os.getenv('EMAIL_PASSWORD')
+        
+        if not all([sender_email, password]):
+            return jsonify({'error': 'Email configuration is missing'}), 500
+        
+        # Create message
+        subject = f"New Contact Form Submission from {data['name']}"
+        body = f"""
+        Name: {data['name']}
+        Email: {data['email']}
+        
+        Message:
+        {data['message']}
+        """
+        
+        msg = MIMEMultipart()
+        msg['From'] = sender_email
+        msg['To'] = receiver_email
+        msg['Subject'] = subject
+        msg.attach(MIMEText(body, 'plain'))
+        
+        # Send email
+        with smtplib.SMTP('smtp.gmail.com', 587) as server:
+            server.starttls()
+            server.login(sender_email, password)
+            server.send_message(msg)
+        
+        return jsonify({'message': 'Message sent successfully!'}), 200
+        
+    except Exception as e:
+        print(f"Error sending email: {str(e)}")
+        return jsonify({'error': 'Failed to send message. Please try again later.'}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)

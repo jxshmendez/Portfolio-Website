@@ -1,45 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
-  
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitSuccess, setSubmitSuccess] = useState(false)
-  const [submitError, setSubmitError] = useState(false)
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
-  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // In a real app, you would send the data to your backend or a form service
-    // For this demo, we'll simulate a successful submission after a delay
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitSuccess(true)
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
-      })
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false)
-      }, 5000)
-    }, 1500)
-  }
   
   return (
     <div className="min-h-screen">
@@ -48,10 +9,10 @@ const Contact = () => {
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-medium mb-6 leading-tight">
-              Get In Touch
+              Let's Connect
             </h1>
             <p className="text-xl mb-6 text-primary-700">
-              I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+              I'm currently seeking new opportunities and would love to connect. 
             </p>
           </div>
         </div>
@@ -60,8 +21,7 @@ const Contact = () => {
       {/* Contact Content */}
       <section className="py-12">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
+          <div className="max-w-3xl">
               <h2 className="text-2xl font-medium mb-6">Contact Information</h2>
               
               <div className="space-y-6">
@@ -134,78 +94,6 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            
-            <div>
-              <form onSubmit={handleSubmit} className="border border-primary-200 p-6">
-                <h2 className="text-2xl font-medium mb-6">Send Message</h2>
-                
-                {submitSuccess && (
-                  <div className="border-l-2 border-accent-500 bg-primary-50 p-4 mb-6">
-                    <p>Message sent successfully!</p>
-                  </div>
-                )}
-                
-                {submitError && (
-                  <div className="border-l-2 border-red-500 bg-red-50 p-4 mb-6">
-                    <p>There was an error sending your message. Please try again.</p>
-                  </div>
-                )}
-                
-                <div className="mb-4">
-                  <label htmlFor="name" className="block text-sm mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-3 py-2 border border-primary-200 focus:border-accent-500 outline-none"
-                  />
-                </div>
-                
-                <div className="mb-4">
-                  <label htmlFor="email" className="block text-sm mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-3 py-2 border border-primary-200 focus:border-accent-500 outline-none"
-                  />
-                </div>
-                
-                <div className="mb-6">
-                  <label htmlFor="message" className="block text-sm mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={4}
-                    className="w-full px-3 py-2 border border-primary-200 focus:border-accent-500 outline-none"
-                  />
-                </div>
-                
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className={`btn-primary ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </button>
-              </form>
-            </div>
           </div>
         </div>
       </section>

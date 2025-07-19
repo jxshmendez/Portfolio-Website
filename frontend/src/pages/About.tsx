@@ -23,7 +23,7 @@ const About = () => {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="md:col-span-2">
-              <h2 className="text-2xl font-medium mb-6">My Journey</h2>
+              
               <div className="space-y-4 text-primary-700">
                 <p>
                   Hi! I'm a Software Engineering graduate who enjoys building things that are useful,

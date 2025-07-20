@@ -40,7 +40,7 @@ const About = () => {
                 </p>
                 <p>
                   Another project I really enjoyed was building an autonomous rover using a Jetson Nano. I trained
-                  it to follow objects in real time, which game me hands on experience applying AI in a physical
+                  it to follow objects in real time, which gave me hands on experience applying AI in a physical
                   environment.
                 </p>
                 <p>

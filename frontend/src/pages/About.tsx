@@ -26,7 +26,7 @@ const About = () => {
               
               <div className="space-y-4 text-primary-700">
                 <p>
-                  Hi! I'm a Software Engineering graduate who enjoys building things that are useful,
+                  Hey! I'm a Software Engineering graduate who enjoys building things that are useful,
                   efficient and accessible.
                 </p>
                 <p>
@@ -93,7 +93,7 @@ const About = () => {
                       {[
                         { name: 'JavaScript', color: '#FED134' },
                         { name: 'Python', color: '#FED134' },
-                        { name: 'SQL', color: '#FED134' }
+                        { name: 'C++', color: '#FED134' }
                       ].map(skill => (
                         <span
                           key={skill.name}
@@ -131,7 +131,8 @@ const About = () => {
                       {[
                         { name: 'Node.js', color: '#FF8389' },
                         { name: 'Flask', color: '#FF8389' },
-                        { name: 'Django', color: '#FF8389' }
+                        { name: 'Django', color: '#FF8389' },
+                        { name: 'SQL', color: '#FF8389' }
                       ].map(skill => (
                         <span
                           key={skill.name}

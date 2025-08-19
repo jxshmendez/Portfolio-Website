@@ -3,6 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <div className="bg-[#F3F3F3] min-h-screen">
+
       {/* Header Section */}
       <section className="pt-32 pb-12 bg-[#9FB8AD]">
         <div className="container">
@@ -11,8 +12,7 @@ const About = () => {
               About Me
             </h1>
             <p className="text-xl mb-6 text-primary-700">
-              BEng Software Engineering graduate with a passion for creating accessible,
-              user-focused applications that solve real-world problems.
+              BEng Software Engineering graduate with a passion for building efficient, user-friendly tools that reduce barriers to access.
             </p>
           </div>
         </div>
@@ -83,17 +83,22 @@ const About = () => {
               </div>
             </div>
             
+            {/* Skills */}
             <div className="space-y-8">
               <div>
                 <h2 className="text-2xl font-medium mb-6">Skills</h2>
                 <div className="space-y-6">
                   <div>
+
+                    {/* Programming Languages */}
                     <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Programming Languages</h3>
                     <div className="flex flex-wrap gap-2">
                       {[
                         { name: 'JavaScript', color: '#FED134' },
                         { name: 'Python', color: '#FED134' },
-                        { name: 'C++', color: '#FED134' }
+                        { name: 'C#', color: '#FED134' },
+                        { name: 'Java', color: '#FED134' },
+                        
                       ].map(skill => (
                         <span
                           key={skill.name}
@@ -106,12 +111,12 @@ const About = () => {
                     </div>
                   </div>
                   
+                  {/* Frontend */}  
                   <div>
                     <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Frontend</h3>
                     <div className="flex flex-wrap gap-2">
                       {[
                         { name: 'React', color: '#00D2BE' },
-                        { name: 'Vue.js', color: '#00D2BE' },
                         { name: 'Tailwind CSS', color: '#00D2BE' }
                       ].map(skill => (
                         <span
@@ -125,6 +130,7 @@ const About = () => {
                     </div>
                   </div>
                   
+                  {/* Backend */}
                   <div>
                     <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Backend</h3>
                     <div className="flex flex-wrap gap-2">
@@ -132,7 +138,8 @@ const About = () => {
                         { name: 'Node.js', color: '#FF8389' },
                         { name: 'Flask', color: '#FF8389' },
                         { name: 'Django', color: '#FF8389' },
-                        { name: 'SQL', color: '#FF8389' }
+                        { name: 'SQL', color: '#FF8389' },
+                        { name: 'TensorFlow', color: '#FF8389' },
                       ].map(skill => (
                         <span
                           key={skill.name}
@@ -144,6 +151,47 @@ const About = () => {
                       ))}
                     </div>
                   </div>
+
+                  {/* Tools */}
+                  <div>
+                    <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Tools</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        { name: 'Docker', color: '#7E7F9A' },
+                        { name: 'Git', color: '#7E7F9A' },
+                        { name: 'Unix', color: '#7E7F9A' }
+                      ].map(skill => (
+                        <span
+                          key={skill.name}
+                          className="px-3 py-1 text-sm text-black"
+                          style={{ backgroundColor: skill.color }}
+                        >
+                          {skill.name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Methodologies */}
+                  <div>
+                    <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Methodologies</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        { name: 'Agile Methodologies', color: '#779BE7' },
+                        { name: 'Test-Driven Development', color: '#779BE7' },
+                        { name: 'Scrum', color: '#779BE7' }
+                      ].map(skill => (
+                        <span
+                          key={skill.name}
+                          className="px-3 py-1 text-sm text-black"
+                          style={{ backgroundColor: skill.color }}
+                        >
+                          {skill.name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
                 </div>
               </div>
               
@@ -151,11 +199,11 @@ const About = () => {
                 <h2 className="text-2xl font-medium mb-6">Interests</h2>
                 <ul className="space-y-2 text-primary-700">
                   <li>Computer Hardware</li>
-                  <li>Web Development</li>
                   <li>Machine Learning</li>
                   <li>Rock Climbing</li>
                   <li>Cooking</li>
                   <li>Guitar</li>
+                  <li>Music Production</li>
                 </ul>
               </div>
             </div>

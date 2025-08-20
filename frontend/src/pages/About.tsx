@@ -159,7 +159,8 @@ const About = () => {
                       {[
                         { name: 'Docker', color: '#7E7F9A' },
                         { name: 'Git', color: '#7E7F9A' },
-                        { name: 'Unix', color: '#7E7F9A' }
+                        { name: 'Unix', color: '#7E7F9A' },
+                        { name: 'Postman', color: '#7E7F9A' },
                       ].map(skill => (
                         <span
                           key={skill.name}

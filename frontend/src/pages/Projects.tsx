@@ -33,7 +33,7 @@ const Projects = () => {
           title: 'Distributed Medical System',
           description: 'Distibuted emergency response system designed to improve coordination between ambulance crews, regional hospitals, and headquarters. It uses client-server architecture to enable real-time sharing of emergency call data and patient medical records.',
           technologies: ['React', 'Node.js', 'SwiftUI', 'SQLite'],
-          github: 'https://github.com/joshmendez/task-manager',
+          github: '#TODO',
           image: '/MedicalSystem.png'
         },
         {
@@ -41,7 +41,7 @@ const Projects = () => {
           title: 'Console First-Person Maze',
           description: 'A simple first-person maze navigation game built using C++ with console-based rendering. This project demonstrates ray-casting techniques to render a 3D-like environment in a text-based console.',
           technologies: ['C++'],
-          github: 'https://github.com/jxshmendez/Console-First-Person-Maze',
+          github: '#TODO',
           image: '/consolemaze.png'
         },
         {

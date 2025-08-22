@@ -88,16 +88,36 @@ const About = () => {
               <div>
                 <h2 className="text-2xl font-medium mb-6">Skills</h2>
                 <div className="space-y-6">
-                  <div>
 
-                    {/* Programming Languages */}
+                {/* Programming Languages */}
+                  <div>
                     <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Programming Languages</h3>
                     <div className="flex flex-wrap gap-2">
                       {[
                         { name: 'JavaScript', color: '#FED134' },
                         { name: 'Python', color: '#FED134' },
-                        { name: 'C#', color: '#FED134' },
                         { name: 'Java', color: '#FED134' },
+                        
+                      ].map(skill => (
+                        <span
+                          key={skill.name}
+                          className="px-3 py-1 text-sm text-black"
+                          style={{ backgroundColor: skill.color }}
+                        >
+                          {skill.name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Data Tools</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        { name: 'SQL', color: '#FAF0CA' },
+                        { name: 'pandas', color: '#FAF0CA' },
+                        { name: 'scikit-learn', color: '#FAF0CA' },
+                        { name: 'matplotlib', color: '#FAF0CA' },
                         
                       ].map(skill => (
                         <span
@@ -138,7 +158,6 @@ const About = () => {
                         { name: 'Node.js', color: '#FF8389' },
                         { name: 'Flask', color: '#FF8389' },
                         { name: 'Django', color: '#FF8389' },
-                        { name: 'SQL', color: '#FF8389' },
                         { name: 'TensorFlow', color: '#FF8389' },
                       ].map(skill => (
                         <span

@@ -143,7 +143,7 @@ const Home = () => {
         <div className="container">
           <h2 className="section-title">Technical Skills</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-6">
-            {['JavaScript', 'Python', 'Flask', 'Django', 'Node.js', 'SQL', 'Git'].map((skill) => (
+            {['JavaScript', 'Python', 'Flask', 'Django', 'Node.js', 'SQL', 'Git','Unix'].map((skill) => (
               <div key={skill} className="py-2 border-b border-primary-200">
                 <span className="font-medium">{skill}</span>
               </div>

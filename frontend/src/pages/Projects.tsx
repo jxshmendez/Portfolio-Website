@@ -59,6 +59,7 @@ const Projects = () => {
           title: 'Flix Movie App',
           description: 'A website for searching movies using The Movie Database, users can searc and favourite movies that will be saved within the browsers local storage.',
           technologies: ['React', 'JavaScript'],
+          image: '/Flix.png',
           github: 'https://github.com/jxshmendez/FlixMovieApp',
           website:'https://flix-movies-nsli.vercel.app/',
         }

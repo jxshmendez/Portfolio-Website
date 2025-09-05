@@ -94,9 +94,9 @@ const About = () => {
                     <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Programming Languages</h3>
                     <div className="flex flex-wrap gap-2">
                       {[
-                        { name: 'JavaScript', color: '#FED134' },
                         { name: 'Python', color: '#FED134' },
-                        { name: 'Java', color: '#FED134' },
+                        { name: 'JavaScript', color: '#FED134' },
+                        { name: 'C++', color: '#FED134' },
                         
                       ].map(skill => (
                         <span

@@ -96,7 +96,8 @@ const About = () => {
                       {[
                         { name: 'Python', color: '#FED134' },
                         { name: 'JavaScript', color: '#FED134' },
-                        { name: 'C++', color: '#FED134' },
+                        { name: 'Java', color: '#FED134' },
+                          { name: 'C#', color: '#FED134' }
                         
                       ].map(skill => (
                         <span
@@ -110,55 +111,54 @@ const About = () => {
                     </div>
                   </div>
 
+                    {/* Frontend */}
+                    <div>
+                        <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Frontend</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {[
+                                { name: 'React', color: '#00D2BE' },
+                                { name: 'Tailwind CSS', color: '#00D2BE' }
+                            ].map(skill => (
+                                <span
+                                    key={skill.name}
+                                    className="px-3 py-1 text-sm text-black"
+                                    style={{ backgroundColor: skill.color }}
+                                >
+                          {skill.name}
+                        </span>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Backend */}
+                    <div>
+                        <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Backend</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {[
+                                { name: 'Spring Boot', color: '#FF8389' },
+                                { name: 'Flask', color: '#FF8389' },
+                                { name: 'Django', color: '#FF8389' },
+                            ].map(skill => (
+                                <span
+                                    key={skill.name}
+                                    className="px-3 py-1 text-sm text-black"
+                                    style={{ backgroundColor: skill.color }}
+                                >
+                          {skill.name}
+                        </span>
+                            ))}
+                        </div>
+                    </div>
+
                   <div>
                     <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Data Tools</h3>
                     <div className="flex flex-wrap gap-2">
                       {[
-                        { name: 'SQL', color: '#FAF0CA' },
+                        { name: 'PostgreSQL', color: '#FAF0CA' },
                         { name: 'pandas', color: '#FAF0CA' },
                         { name: 'scikit-learn', color: '#FAF0CA' },
                         { name: 'matplotlib', color: '#FAF0CA' },
                         
-                      ].map(skill => (
-                        <span
-                          key={skill.name}
-                          className="px-3 py-1 text-sm text-black"
-                          style={{ backgroundColor: skill.color }}
-                        >
-                          {skill.name}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  {/* Frontend */}  
-                  <div>
-                    <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Frontend</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {[
-                        { name: 'React', color: '#00D2BE' },
-                        { name: 'Tailwind CSS', color: '#00D2BE' }
-                      ].map(skill => (
-                        <span
-                          key={skill.name}
-                          className="px-3 py-1 text-sm text-black"
-                          style={{ backgroundColor: skill.color }}
-                        >
-                          {skill.name}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  {/* Backend */}
-                  <div>
-                    <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Backend</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {[
-                        { name: 'Node.js', color: '#FF8389' },
-                        { name: 'Flask', color: '#FF8389' },
-                        { name: 'Django', color: '#FF8389' },
-                        { name: 'TensorFlow', color: '#FF8389' },
                       ].map(skill => (
                         <span
                           key={skill.name}
@@ -180,6 +180,7 @@ const About = () => {
                         { name: 'Git', color: '#7E7F9A' },
                         { name: 'Unix', color: '#7E7F9A' },
                         { name: 'Postman', color: '#7E7F9A' },
+                          { name: 'Jira', color: '#7E7F9A' },
                       ].map(skill => (
                         <span
                           key={skill.name}
@@ -219,7 +220,7 @@ const About = () => {
                 <h2 className="text-2xl font-medium mb-6">Interests</h2>
                 <ul className="space-y-2 text-primary-700">
                   <li>Computer Hardware</li>
-                  <li>Machine Learning</li>
+                  <li>Web Development</li>
                   <li>Rock Climbing</li>
                   <li>Cooking</li>
                   <li>Guitar</li>

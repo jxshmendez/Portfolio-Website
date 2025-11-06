@@ -15,24 +15,26 @@ const Home = () => {
   const [loading, setLoading] = useState(true)
   
   useEffect(() => {
-    // Simulate API call with timeout
     setTimeout(() => {
       setFeaturedProjects([
         {
           id: 1,
           title: 'Football Fatigue Tracker With Computer Vision',
-          description: 'A Football Fatigue Tracker that uses only Computer Vision to detect the player\'s fatigue leveraging the YOLO (You Only Look Once) algorithm and ByteTrack algorithm.',
+          description: 'A Football Fatigue Tracker that uses only Computer Vision to detect the player\'' +
+              's fatigue leveraging the YOLO (You Only Look Once) algorithm and ByteTrack algorithm.',
           technologies: ['YOLO', 'ByteTrack', 'OpenCV', 'Python'],
           github: 'https://github.com/jxshmendez/Football_Fatigue_Analysis',
           image: '/footballFatigue.png'
         },
         {
           id: 2,
-          title: 'Distributed Medical System',
-          description: 'Distributed emergency response system designed to improve coordination between ambulance crews, regional hospitals, and headquarters.',
-          technologies: ['React', 'Node.js', 'SwiftUI', 'SQLite'],
-          github: 'https://github.com/joshmendez/task-manager',
-          image: '/MedicalSystem.png'
+          title: 'Rock Climbing Social App - [UNDER DEVELOPMENT]',
+          description:'"Wall" is a full-stack Spring Boot and React app that lets users track climbing progress,' +
+              'manage routes, log sessions, and connect with other climbers with JWT authentication' +
+              ' and automated CI intergration.',
+          technologies: ['Java', 'Spring Boot', 'React', 'Tailwind', 'PostgreSQL'],
+          github: 'https://github.com/jxshmendez/Climber',
+          image: '/WallApp-pic.png'
         }
       ])
       setLoading(false)
@@ -41,7 +43,7 @@ const Home = () => {
   return (
     <div className="bg-[#F3F3F3] min-h-screen">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-[#EFF8E2]">
+      <section className="pt-32 pb-16 bg-[#d5e6bc]">
         <div className="container">
           <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
             <div className="max-w-2xl mt-8 md:mt-0">
@@ -49,9 +51,12 @@ const Home = () => {
                 Software Engineer
               </h1>
               <p className="text-gray-600 mb-8 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 Edinburgh, UK
               </p>
@@ -87,8 +92,137 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Project Showcase */}
-      <section className="py-16 bg-primary-50">
+    {/* Skills Section */}
+    <section className="py-16 flex flex-wrap justify-center gap-10 text-center ">
+        {/* Programming Languages */}
+
+        <div>
+            <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">
+                Languages
+            </h3>
+            <div className="flex flex-col items-center gap-2">
+                {[
+                    { name: "Java", color: "#FED134" },
+                    { name: "Python", color: "#FED134" },
+                    { name: "JavaScript", color: "#FED134" },
+                ].map((skill) => (
+                    <span
+                        key={skill.name}
+                        className="px-3 py-1 text-sm text-black"
+                        style={{ backgroundColor: skill.color }}
+                    >
+          {skill.name}
+        </span>
+                ))}
+            </div>
+        </div>
+
+        {/* Frontend */}
+        <div>
+            <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Frontend</h3>
+            <div className="flex flex-col items-center gap-2">
+                {[
+                    { name: "React", color: "#00D2BE" },
+                    { name: "Tailwind CSS", color: "#00D2BE" },
+                ].map((skill) => (
+                    <span
+                        key={skill.name}
+                        className="px-3 py-1 text-sm text-black"
+                        style={{ backgroundColor: skill.color }}
+                    >
+          {skill.name}
+        </span>
+                ))}
+            </div>
+        </div>
+
+        {/* Backend */}
+        <div>
+            <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Backend</h3>
+            <div className="flex flex-col items-center gap-2">
+                {[
+                    { name: "Flask", color: "#FF8389" },
+                    { name: "Spring Boot", color: "#FF8389" },
+                ].map((skill) => (
+                    <span
+                        key={skill.name}
+                        className="px-3 py-1 text-sm text-black"
+                        style={{ backgroundColor: skill.color }}
+                    >
+          {skill.name}
+        </span>
+                ))}
+            </div>
+        </div>
+
+        {/* Data */}
+        <div>
+            <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Data</h3>
+            <div className="flex flex-col items-center gap-2">
+                {[
+                    { name: "pandas", color: "#FAF0CA" },
+                    { name: "matplotlib", color: "#FAF0CA" },
+                    { name: "PostgreSQL", color: "#FAF0CA" },
+
+                ].map((skill) => (
+                    <span
+                        key={skill.name}
+                        className="px-3 py-1 text-sm text-black"
+                        style={{ backgroundColor: skill.color }}
+                    >
+          {skill.name}
+        </span>
+                ))}
+            </div>
+        </div>
+
+        {/* Tools */}
+        <div>
+            <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Tools</h3>
+            <div className="flex flex-col items-center gap-2">
+                {[
+                    { name: "Git", color: "#7E7F9A" },
+                    { name: "Unix", color: "#7E7F9A" },
+                    { name: "Docker", color: "#7E7F9A" },
+                    { name: "Jenkins", color: "#7E7F9A" },
+                    { name: "Postman", color: "#7E7F9A" },
+
+                ].map((skill) => (
+                    <span
+                        key={skill.name}
+                        className="px-3 py-1 text-sm text-black"
+                        style={{ backgroundColor: skill.color }}
+                    >
+          {skill.name}
+        </span>
+                ))}
+            </div>
+        </div>
+
+        {/* Methodologies */}
+        <div>
+            <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Methodologies</h3>
+            <div className="flex flex-col items-center gap-2">
+                {[
+                    { name: "Agile Methodologies", color: "#779BE7" },
+                    { name: "Test-Driven Development", color: "#779BE7" },
+                ].map((skill) => (
+                    <span
+                        key={skill.name}
+                        className="px-3 py-1 text-sm text-black "
+                        style={{ backgroundColor: skill.color }}
+                    >
+          {skill.name}
+        </span>
+                ))}
+            </div>
+        </div>
+    </section>
+
+
+
+    {/* Project Showcase */}
+      <section className="py-6 ">
         <div className="container">
           <h2 className="section-title">Featured Projects</h2>
           {loading ? (
@@ -118,7 +252,7 @@ const Home = () => {
                     <h3 className="text-xl font-medium mb-2 text-gray-800">{project.title}</h3>
                     <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.slice(0, 3).map((tech, index) => (
+                      {project.technologies.slice(0, 5).map((tech, index) => (
                         <span key={index} className="text-xs bg-primary-100 text-primary-700 px-2 py-1 rounded">
                           {tech}
                         </span>
@@ -135,20 +269,6 @@ const Home = () => {
               ))}
             </div>
           )}
-        </div>
-      </section>
-      
-      {/* Skills Section */}
-      <section className="py-16">
-        <div className="container">
-          <h2 className="section-title">Technical Skills</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-6">
-            {['JavaScript', 'Python', 'Flask', 'Django', 'Node.js', 'SQL', 'Git','Unix'].map((skill) => (
-              <div key={skill} className="py-2 border-b border-primary-200">
-                <span className="font-medium">{skill}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
     </div>

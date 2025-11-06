@@ -20,7 +20,7 @@ const About = () => {
       
       {/* Main Content */}
       <section className="py-12">
-        <div className="container">
+        <div className="container ">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="md:col-span-2">
               
@@ -39,18 +39,20 @@ const About = () => {
                   hardware.
                 </p>
                 <p>
-                  Another project I really enjoyed was building an autonomous rover using a Jetson Nano. I trained
-                  it to follow objects in real time, which gave me hands on experience applying AI in a physical
-                  environment.
-                </p>
-                <p>
-                  I care deeply about accessibility. Not just in terms of design, but also making sure the tools I
-                  build work well on lower-end devices. Good software should be efficient, lightweight, and usable by
-                  everyone, regardless of what kind of tech they have.
+                  I am currently developing an app that allows rock climbers to connect with other climbers, track
+                    progress and share achievements. This will be a full stack project that will include a website and a
+                    mobile app. I have put a big focus on good project management by using tools such as Jira and Github
+                    issues, I have also adopted an Agile-like workflow to help me iterate through features and fix issues more
+                    efficiently. The main goal of this passion project is to sharpen my programming skills, I love learning
+                    about new technologies and how to navigate through bugs effectively.
                 </p>
                 <p>
                   Thank you for visiting, check out my projects or get in touch if you'd like to connect!
                 </p>
+
+                  <p>
+                      Josh
+                  </p>
               </div>
               
               <h2 className="text-2xl font-medium mt-12 mb-6">Education</h2>
@@ -94,11 +96,11 @@ const About = () => {
                     <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Programming Languages</h3>
                     <div className="flex flex-wrap gap-2">
                       {[
+                          { name: 'Java', color: '#FED134' },
                         { name: 'Python', color: '#FED134' },
                         { name: 'JavaScript', color: '#FED134' },
-                        { name: 'Java', color: '#FED134' },
-                          { name: 'C#', color: '#FED134' }
-                        
+
+
                       ].map(skill => (
                         <span
                           key={skill.name}
@@ -137,7 +139,6 @@ const About = () => {
                             {[
                                 { name: 'Spring Boot', color: '#FF8389' },
                                 { name: 'Flask', color: '#FF8389' },
-                                { name: 'Django', color: '#FF8389' },
                             ].map(skill => (
                                 <span
                                     key={skill.name}
@@ -151,14 +152,13 @@ const About = () => {
                     </div>
 
                   <div>
-                    <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Data Tools</h3>
+                    <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Data</h3>
                     <div className="flex flex-wrap gap-2">
                       {[
                         { name: 'PostgreSQL', color: '#FAF0CA' },
                         { name: 'pandas', color: '#FAF0CA' },
-                        { name: 'scikit-learn', color: '#FAF0CA' },
                         { name: 'matplotlib', color: '#FAF0CA' },
-                        
+
                       ].map(skill => (
                         <span
                           key={skill.name}
@@ -180,7 +180,6 @@ const About = () => {
                         { name: 'Git', color: '#7E7F9A' },
                         { name: 'Unix', color: '#7E7F9A' },
                         { name: 'Postman', color: '#7E7F9A' },
-                          { name: 'Jira', color: '#7E7F9A' },
                       ].map(skill => (
                         <span
                           key={skill.name}
@@ -200,7 +199,6 @@ const About = () => {
                       {[
                         { name: 'Agile Methodologies', color: '#779BE7' },
                         { name: 'Test-Driven Development', color: '#779BE7' },
-                        { name: 'Scrum', color: '#779BE7' }
                       ].map(skill => (
                         <span
                           key={skill.name}
@@ -212,7 +210,7 @@ const About = () => {
                       ))}
                     </div>
                   </div>
-                  
+
                 </div>
               </div>
               

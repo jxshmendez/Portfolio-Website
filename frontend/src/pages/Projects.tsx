@@ -20,58 +20,81 @@ const Projects = () => {
   useEffect(() => {
     setTimeout(() => {
       setProjects([
+          {
+              id: 1,
+              title: 'Rock Climbing Social App - [UNDER DEVELOPMENT]',
+              description: '"Wall" is a full-stack Spring Boot and React app that lets users track climbing progress,' +
+                  'manage routes, log sessions, and connect with other climbers with JWT authentication and automated CI intergration.',
+              technologies: ['Java', 'Spring Boot', 'React', 'Tailwind', 'PostgreSQL'],
+              github: 'https://github.com/jxshmendez/Climber',
+              image: '/WallApp-pic.png'
+          },
         {
-          id: 1,
+          id: 2,
           title: 'Football Fatigue Tracker With Computer Vision',
-          description: 'A Football Fatigue Tracker that uses only Computer Vision to detect the player\'s fatigue leveraging the YOLO (You Only Look Once) algorithm and ByteTrack algorithm.',
+          description: 'A Football Fatigue Tracker that uses only Computer Vision to detect the player\'s ' +
+              'fatigue leveraging the YOLO (You Only Look Once) algorithm and ByteTrack algorithm.',
           technologies: ['YOLO', 'ByteTrack', 'OpenCV', 'Python'],
           github: 'https://github.com/jxshmendez/Football_Fatigue_Analysis',
           video: '/football.webm',
           hasVideo: true
         },
+          {
+              id: 3,
+              title: 'Portfolio Website',
+              description: 'Personal portfolio website, made with React and Tailwind CSS, and hosted using Vercel',
+              technologies: ['React', 'Tailwind CSS'],
+              github: 'https://github.com/jxshmendez/Portfolio-Website',
+              image: '/Portfolio-pic.png'
+          },
         {
-          id: 2,
+          id: 4,
           title: 'Distributed Medical System',
-          description: 'Distibuted emergency response system designed to improve coordination between ambulance crews, regional hospitals, and headquarters. It uses client-server architecture to enable real-time sharing of emergency call data and patient medical records.',
+          description: 'Distibuted emergency response system designed to improve coordination between ambulance crews,' +
+              ' regional hospitals, and headquarters. It uses client-server architecture to enable real-time sharing of' +
+              ' emergency call data and patient medical records.',
           technologies: ['React', 'Node.js', 'SwiftUI', 'SQLite'],
           github: '#TODO',
           image: '/MedicalSystem.png'
         },
         {
-          id: 3,
+          id: 5,
           title: 'Console First-Person Maze',
-          description: 'A simple first-person maze navigation game built using C++ with console-based rendering. This project demonstrates ray-casting techniques to render a 3D-like environment in a text-based console.',
+          description: 'A simple first-person maze navigation game built using C++ with console-based rendering.' +
+              ' This project demonstrates ray-casting techniques to render a 3D-like environment in a text-based console.',
           technologies: ['C++'],
           github: '#TODO',
           image: '/consolemaze.png'
         },
         {
-          id: 4,
+          id: 6,
           title: 'Group Project: Machine Learning On Board an Autonomous Robot',
-          description: 'A group project implementing machine learning on an autonomous robot using computer vision for navigation and object detection.',
+          description: 'A group project implementing machine learning on an autonomous robot using computer ' +
+              'vision for navigation and object detection.',
           technologies: ['Python', 'YOLO', 'ByteTrack', 'OpenCV'],
           github: 'https://github.com/jxshmendez/Machine-Learning-On-board-an-Autonomous-Robot/tree/main',
           video: '/Robot.mp4',
           hasVideo: true
         },
         {
-          id: 5,
+          id: 7,
           title: 'Flix Movie App',
-          description: 'A website for searching movies using The Movie Database, users can search and favourite movies that will be saved within the browsers local storage.',
+          description: 'A website for searching movies using The Movie Database, users can search and favourite ' +
+              'movies that will be saved within the browsers local storage.',
           technologies: ['React', 'JavaScript'],
           image: '/Flix.png',
           github: 'https://github.com/jxshmendez/FlixMovieApp',
           website:'https://flix-movies-nsli.vercel.app/',
-        }
+        },
       ])
       setLoading(false)
     }, 600)
   }, [])
   
   return (
-    <div className="bg-[#F3F3F3] min-h-screen">
+    <div className="bg-[#F3F3F3] min-h-screen]">
       {/* Header Section */}
-      <section className="pt-32 pb-12 bg-[#D0DCD7]">
+      <section className="pt-32 pb-12 bg-[#d3f2da]">
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-medium mb-6 leading-tight">
@@ -94,7 +117,8 @@ const Projects = () => {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {projects.map((project) => (
-                <div key={project.id} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div key={project.id} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg
+                transition-shadow duration-300">
                   <div className="h-48 overflow-hidden">
                     {project.hasVideo ? (
                       <div className="relative w-full h-full">
@@ -137,7 +161,8 @@ const Projects = () => {
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                       />
                     ) : (
-                      <div className="w-full h-full bg-gradient-to-r from-primary-100 to-primary-200 flex items-center justify-center">
+                      <div className="w-full h-full bg-gradient-to-r from-primary-100 to-primary-200 \
+                      flex items-center justify-center">
                         <span className="text-primary-500 text-center px-4">{project.title}</span>
                       </div>
                     )}
@@ -166,7 +191,8 @@ const Projects = () => {
                       >
                         <span>View on GitHub</span>
                         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
                       </a>
 

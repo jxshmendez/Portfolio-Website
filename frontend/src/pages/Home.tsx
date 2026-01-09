@@ -232,7 +232,7 @@ const Home = () => {
             <div className="flex flex-col items-center gap-2">
                 {[
                     { name: "Agile Methodologies", color: "#779BE7" },
-                    { name: "Domain-Driver Design", color: "#779BE7" },
+                    { name: "Domain-Driven Design", color: "#779BE7" },
                     { name: "Test-Driven Development", color: "#779BE7" },
                     { name: "CI/CD (GitHub Actions & Jenkins)", color: "#779BE7" },
                 ].map((skill) => (

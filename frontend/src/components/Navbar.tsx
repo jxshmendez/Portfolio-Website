@@ -31,7 +31,7 @@ const Navbar = () => {
       >
         <div className="container h-16 flex items-center justify-between">
           <NavLink to="/" className="group relative text-xl font-medium overflow-hidden">
-            <span className="relative z-10">Josh Mendez</span>
+            <span className="relative z-10">Joshua Mendez</span>
             <span className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#FCAB10] via-[#FCAB10]/80 to-[#FCAB10]/30 transition-all duration-500 group-hover:w-full"></span>
           </NavLink>
           

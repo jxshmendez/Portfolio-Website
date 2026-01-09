@@ -5,7 +5,7 @@ const About = () => {
     <div className="bg-[#F3F3F3] min-h-screen">
 
       {/* Header Section */}
-      <section className="pt-32 pb-12 bg-[#9FB8AD]">
+      <section className="pt-32 pb-12 bg-[#7E7F9A]">
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-medium mb-6 leading-tight">
@@ -97,8 +97,9 @@ const About = () => {
                     <div className="flex flex-wrap gap-2">
                       {[
                           { name: 'Java', color: '#FED134' },
-                        { name: 'Python', color: '#FED134' },
-                        { name: 'JavaScript', color: '#FED134' },
+                          { name: 'Python', color: '#FED134' },
+                          { name: 'JavaScript', color: '#FED134' },
+                          { name: 'TypeScript', color: '#FED134' }
 
 
                       ].map(skill => (
@@ -138,7 +139,7 @@ const About = () => {
                         <div className="flex flex-wrap gap-2">
                             {[
                                 { name: 'Spring Boot', color: '#FF8389' },
-                                { name: 'Flask', color: '#FF8389' },
+                                { name: 'Node.js', color: '#FF8389' },
                             ].map(skill => (
                                 <span
                                     key={skill.name}
@@ -155,9 +156,10 @@ const About = () => {
                     <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Data</h3>
                     <div className="flex flex-wrap gap-2">
                       {[
-                        { name: 'PostgreSQL', color: '#FAF0CA' },
-                        { name: 'pandas', color: '#FAF0CA' },
-                        { name: 'matplotlib', color: '#FAF0CA' },
+                          { name: 'PostgreSQL', color: '#FAF0CA' },
+                          { name: 'MongoDB', color: '#FAF0CA' },
+                          { name: 'pandas', color: '#FAF0CA' },
+                          { name: 'matplotlib', color: '#FAF0CA' },
 
                       ].map(skill => (
                         <span
@@ -178,8 +180,10 @@ const About = () => {
                       {[
                         { name: 'Docker', color: '#7E7F9A' },
                         { name: 'Git', color: '#7E7F9A' },
-                        { name: 'Unix', color: '#7E7F9A' },
+                        { name: 'Linux (Fedora, RHEL)', color: '#7E7F9A' },
                         { name: 'Postman', color: '#7E7F9A' },
+                          { name: 'Apache Kafka', color: '#7E7F9A' },
+                          { name: 'RabbitMQ', color: '#7E7F9A' },
                       ].map(skill => (
                         <span
                           key={skill.name}
@@ -191,7 +195,28 @@ const About = () => {
                       ))}
                     </div>
                   </div>
-
+                    {/*Testing & Monitoring*/}
+                    <div>
+                        <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Testing & Monitoring</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {[
+                                { name: 'JUnit', color: '#EB6534' },
+                                { name: 'Jest', color: '#EB6534' },
+                                { name: 'Mockito', color: '#EB6534'},
+                                { name: 'Sentry', color: '#EB6534'},
+                                { name: 'Prometheus', color: '#EB6534'},
+                                { name: 'Grafana', color: '#EB6534'}
+                            ].map(skill => (
+                                <span
+                                    key={skill.name}
+                                    className="px-3 py-1 text-sm text-black"
+                                    style={{ backgroundColor: skill.color }}
+                                >
+                          {skill.name}
+                        </span>
+                            ))}
+                        </div>
+                    </div>
                   {/* Methodologies */}
                   <div>
                     <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Methodologies</h3>
@@ -199,6 +224,8 @@ const About = () => {
                       {[
                         { name: 'Agile Methodologies', color: '#779BE7' },
                         { name: 'Test-Driven Development', color: '#779BE7' },
+                          { name: 'Domain-Driven Design', color: '#779BE7' },
+                          { name: "CI/CD (GitHub Actions & Jenkins)", color: "#779BE7" },
                       ].map(skill => (
                         <span
                           key={skill.name}

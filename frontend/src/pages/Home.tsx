@@ -58,7 +58,7 @@ const Home = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                         d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                Edinburgh, UK
+                Edinburgh, Scotland
               </p>
             <p className="text-xl mb-10 leading-relaxed text-primary-700">
               BEng Software Engineering graduate with a passion for creating accessible, 
@@ -82,7 +82,7 @@ const Home = () => {
             <div className="flex-shrink-0 w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96">
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-lg">
                 <img 
-                  src="/profilepic_HighRes.jpeg" 
+                  src="/ME.jpg"
                   alt="Josh Mendez"
                   className="w-full h-full object-cover"
                 />
@@ -102,9 +102,10 @@ const Home = () => {
             </h3>
             <div className="flex flex-col items-center gap-2">
                 {[
-                    { name: "Java", color: "#FED134" },
-                    { name: "Python", color: "#FED134" },
-                    { name: "JavaScript", color: "#FED134" },
+                    { name: 'Java', color: '#FED134' },
+                    { name: 'Python', color: '#FED134' },
+                    { name: 'JavaScript', color: '#FED134' },
+                    { name: 'TypeScript', color: '#FED134' }
                 ].map((skill) => (
                     <span
                         key={skill.name}
@@ -141,7 +142,7 @@ const Home = () => {
             <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Backend</h3>
             <div className="flex flex-col items-center gap-2">
                 {[
-                    { name: "Flask", color: "#FF8389" },
+                    { name: "Node.js", color: "#FF8389" },
                     { name: "Spring Boot", color: "#FF8389" },
                 ].map((skill) => (
                     <span
@@ -162,7 +163,8 @@ const Home = () => {
                 {[
                     { name: "pandas", color: "#FAF0CA" },
                     { name: "matplotlib", color: "#FAF0CA" },
-                    { name: "PostgreSQL", color: "#FAF0CA" },
+                    { name: "MongoDB", color: "#FAF0CA" },
+                    { name: "PostgreSQL", color: "#FAF0CA" }
 
                 ].map((skill) => (
                     <span
@@ -182,10 +184,35 @@ const Home = () => {
             <div className="flex flex-col items-center gap-2">
                 {[
                     { name: "Git", color: "#7E7F9A" },
-                    { name: "Unix", color: "#7E7F9A" },
                     { name: "Docker", color: "#7E7F9A" },
-                    { name: "Jenkins", color: "#7E7F9A" },
                     { name: "Postman", color: "#7E7F9A" },
+                    { name: "RabbitMQ", color: "#7E7F9A" },
+                    { name: "Apache Kafka", color: "#7E7F9A" },
+                    { name: "Linux (Fedora, RHEL)", color: "#7E7F9A" }
+
+                ].map((skill) => (
+                    <span
+                        key={skill.name}
+                        className="px-3 py-1 text-sm text-black"
+                        style={{ backgroundColor: skill.color }}
+                    >
+          {skill.name}
+        </span>
+                ))}
+            </div>
+        </div>
+
+        {/* Monitoring */}
+        <div>
+            <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Testing & Monitoring</h3>
+            <div className="flex flex-col items-center gap-2">
+                {[
+                    { name: 'Jest', color: '#EB6534' },
+                    { name: 'JUnit', color: '#EB6534' },
+                    { name: 'Sentry', color: '#EB6534'},
+                    { name: 'Grafana', color: '#EB6534'},
+                    { name: 'Mockito', color: '#EB6534'},
+                    { name: 'Prometheus', color: '#EB6534'},
 
                 ].map((skill) => (
                     <span
@@ -205,7 +232,9 @@ const Home = () => {
             <div className="flex flex-col items-center gap-2">
                 {[
                     { name: "Agile Methodologies", color: "#779BE7" },
+                    { name: "Domain-Driver Design", color: "#779BE7" },
                     { name: "Test-Driven Development", color: "#779BE7" },
+                    { name: "CI/CD (GitHub Actions & Jenkins)", color: "#779BE7" },
                 ].map((skill) => (
                     <span
                         key={skill.name}

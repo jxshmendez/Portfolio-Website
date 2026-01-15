@@ -96,6 +96,7 @@ const About = () => {
                     <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Programming Languages</h3>
                     <div className="flex flex-wrap gap-2">
                       {[
+                          { name: 'C#', color: '#FED134' },
                           { name: 'Java', color: '#FED134' },
                           { name: 'Python', color: '#FED134' },
                           { name: 'JavaScript', color: '#FED134' },
@@ -140,6 +141,7 @@ const About = () => {
                             {[
                                 { name: 'Spring Boot', color: '#FF8389' },
                                 { name: 'Node.js', color: '#FF8389' },
+                                { name: '.NET', color: '#FF8389' },
                             ].map(skill => (
                                 <span
                                     key={skill.name}

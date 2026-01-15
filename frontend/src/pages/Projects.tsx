@@ -27,6 +27,7 @@ const Projects = () => {
                   'manage routes, log sessions, and connect with other climbers with JWT authentication and automated CI intergration.',
               technologies: ['Java', 'Spring Boot', 'React', 'Tailwind', 'PostgreSQL'],
               github: 'https://github.com/jxshmendez/Climber',
+              website: 'https://the-wall-social-website.vercel.app/',
               image: '/WallApp-pic.png'
           },
         {
@@ -189,7 +190,7 @@ const Projects = () => {
                         rel="noopener noreferrer"
                         className="text-accent-500 hover:underline flex items-center"
                       >
-                        <span>View on GitHub</span>
+                        <span>GitHub</span>
                         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                                 d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -203,7 +204,7 @@ const Projects = () => {
                           rel="noopener noreferrer"
                           className="text-accent-500 hover:underline flex items-center"
                         >
-                          <span>View Website</span>
+                          <span>Website</span>
                           <svg 
                             className="w-4 h-4 ml-1" 
                             fill="none" 

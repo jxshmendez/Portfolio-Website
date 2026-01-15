@@ -102,6 +102,7 @@ const Home = () => {
             </h3>
             <div className="flex flex-col items-center gap-2">
                 {[
+                    { name: 'C#', color: '#FED134' },
                     { name: 'Java', color: '#FED134' },
                     { name: 'Python', color: '#FED134' },
                     { name: 'JavaScript', color: '#FED134' },
@@ -142,6 +143,7 @@ const Home = () => {
             <h3 className="text-sm uppercase font-medium mb-3 text-primary-600">Backend</h3>
             <div className="flex flex-col items-center gap-2">
                 {[
+                    { name: '.NET', color: '#FF8389' },
                     { name: "Node.js", color: "#FF8389" },
                     { name: "Spring Boot", color: "#FF8389" },
                 ].map((skill) => (
